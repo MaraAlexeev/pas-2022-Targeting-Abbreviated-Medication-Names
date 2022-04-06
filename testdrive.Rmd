@@ -3,18 +3,18 @@ title: "Targeting abbreviated medication names with the power of NLP"
 author:
   - name: Mara Alexeev
     affil: 1
-    twitter: brentthorne18
-    email: brentthorne18@gmail.com
-    orcid: 0000-0002-1099-3857
+    twitter: MaraAlexeev
+    email: mara.alexeev@childrens.harvard.edu
+    orcid: 0000-0002-1063-5494
     main: true
 affiliation:
   - num: 1
-    address: Department of Earth Sceicnes, Brock University
+    address: Department of Pediatrics, Boston Children's Hospital
 main_findings:
-  - "Make **better posters** with RMarkdown + **posterdown**."
-  - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
-logoleft_name: '![]("./images/qr-nlp-meds.png"){.main-img-left}'
-logoright_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main-img-right}'
+  - "Test drive" 
+  - "Test drive 2."
+logoright_name: '![](bch_logo.svg){.main-img-right}'
+logoleft_name: '![](qr-nlp-meds.png){.main-img-left}'
 output: 
   posterdown::posterdown_betterland:
     self_contained: true
@@ -36,13 +36,14 @@ knitr::opts_chunk$set(results = 'asis',
 options(knitr.table.format = "html") 
 ```
 
+
 # Introduction
 
 According to The Joint Commission recommendations, medication names should not be abbreviated as misinterpretation may lead to administration of incorrect medication.
 
 ## Objectives
 
-1. Identify abbreviated medication names (AMNs) in a first step towards elimination. 
+1. Identify abbreviated medication names in a first step towards elimination. 
 
 # Methods
 
@@ -56,7 +57,7 @@ The abstracted lists were then matched against both generic and commercial medic
 
 There were 29,877 consult notes available for review. We narrowed the corpus of documents to services more likely to prescribe medication (endocrinology, cardiology, neurology) and eliminated those services where medication treatment is a smaller part of their practice (orthopedics, urology) leaving 16,010 notes for review.  
 
-We identified 8,288 unique medication terms using NER and 2,671 using Regex. The union of the two lists of medications had 9,541 unique medication terms. After cross referencing against RxNorm and NDCD 7,248 unique medication terms remained. After reviewing all terms occurring 2 or more times, a subset of terms, which were identified by an author as likely AMNs, was curated and is presented with frequency counts in Table 1. 
+We identified 8,288 unique medication terms using NER and 2,671 using Regex. The union of the two lists of medications had 9,541 unique medication terms. After cross referencing against RxNorm and NDCD 7,248 unique medication terms remained. After reviewing all terms occurring 2 or more times, a subset of terms, which were identified by an author as likely abbreviated medication names, was curated and is presented with frequency counts in Table 1. 
 
 
 ```{r myprettycode, echo=FALSE,collapse=TRUE, tab.cap='Selected Top Medication Abbreviations', fig.height= 5, out.width="100%"}
@@ -67,4 +68,4 @@ knitr::include_graphics("./images/table-meds.png")
 
 # Conlusions
 
-NLP provides a novel approach to establish libraries of AMNs to be eliminated from EHR documentation. Future studies should include domain-expert champions who will help interpret domain-specific expressions beyond the expertise of the informatician
+NLP provides a novel approach to establish libraries of abbreviated medication names to be eliminated from clinical documentation. Future studies should include domain-expert champions who will help interpret domain-specific expressions beyond the expertise of the informatician
