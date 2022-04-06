@@ -1,5 +1,5 @@
 ---
-title: "TARGETING ABBREVIATED MEDICATION NAMES WITH THE POWER OF NLP: PROOF OF CONCEPT"
+title: "Targeting abbreviated medication names with the power of NLP"
 author:
   - name: Mara Alexeev
     affil: 1
@@ -13,11 +13,11 @@ affiliation:
 main_findings:
   - "Make **better posters** with RMarkdown + **posterdown**."
   - '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main_pic}'
-logoleft_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/qr-code-black.png){.main-img-left}'
+logoleft_name: '![]("./images/qr-nlp-meds.png"){.main-img-left}'
 logoright_name: '![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.main-img-right}'
 output: 
   posterdown::posterdown_betterland:
-    self_contained: false
+    self_contained: true
     pandoc_args: --mathjax
     highlight: haddock
     number_sections: false
@@ -36,16 +36,9 @@ knitr::opts_chunk$set(results = 'asis',
 options(knitr.table.format = "html") 
 ```
 
-```{r myplot, include=FALSE}
-svg('myplot.svg')
-plot(iris$Sepal.Length, iris$Sepal.Width)
-dev.off()
-```
-
 # Introduction
 
 According to The Joint Commission recommendations, medication names should not be abbreviated as misinterpretation may lead to administration of incorrect medication.
-
 
 ## Objectives
 
