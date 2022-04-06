@@ -1,15 +1,36 @@
 ---
 title: "Targeting abbreviated medication names with the power of NLP"
 author:
-  - name: Mara Alexeev
+  - name: Mara Alexeev, MD, MPH
     affil: 1
     twitter: MaraAlexeev
     email: mara.alexeev@childrens.harvard.edu
     orcid: 0000-0002-1063-5494
     main: true
+  - name: Amir Kimia, MD
+    affil: 2
+    email: amir.kimia@childrens.harvard.edu
+  - name: Marvin B. Harper, MD
+    affil: 2
+    email: marvin.harper@childrens.harvard.edu
+  - name: Assaf Landschaft, M.Sc.,
+    affil: 5
+    email: assaf.landschaft@childrens.harvard.edu
+  - name: Al Ozonoff, PhD
+    affil: 3, 4
+    email: al.ozonoff@childrens.harvard.edu
 affiliation:
   - num: 1
     address: Department of Pediatrics, Boston Children's Hospital
+  - num: 2
+    address: Division of Emergency Medicine, Boston Children’s Hospital
+  - num: 3
+    address: Department of Pediatrics, Harvard Medical School
+  - num: 4
+    address: Precision Vaccines Program, Boston Children's Hospital
+  - num: 5
+    address: Boston Children's Hospital
+    
 main_findings:
   - "Test drive" 
   - "Test drive 2."
