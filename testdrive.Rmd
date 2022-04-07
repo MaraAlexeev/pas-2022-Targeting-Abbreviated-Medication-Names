@@ -1,5 +1,5 @@
 ---
-title: "Targeting abbreviated medication names with the power of NLP"
+title: "Targeting abbreviated medication names with NLP"
 author:
   - name: Mara Alexeev, MD, MPH
     affil: 1
@@ -33,11 +33,13 @@ affiliation:
     
 main_findings:
   - "Abbreviated medication names are present in many notes and can be ambiguous."
-  - "We can identify shortened medication names with natural language processing tools." 
+  - "We can identify shortened medication names with natural language processing (NLP) tools." 
 logoright_name: '![](bch_logo.svg){.main-img-right}'
 logoleft_name: '![](qr-nlp-meds.png){.main-img-left}'
 poster_height: "31.5in"
 poster_width: "56in"
+font_family: "Roboto"
+main_fontfamily: "Roboto"
 output: 
   posterdown::posterdown_betterland:
     self_contained: true
@@ -59,7 +61,7 @@ options(knitr.table.format = "html")
 
 # Introduction
 
-According to The Joint Commission recommendations, medication names should not be abbreviated as misinterpretation may lead to administration of incorrect medication.
+According to The Joint Commission, medication names should not be abbreviated as misinterpretation may lead to administration of incorrect medication.
 
 ## Objectives
 
@@ -67,9 +69,7 @@ According to The Joint Commission recommendations, medication names should not b
 
 # Methods
 
-Retrospective chart review of pediatric ED consult notes at a tertiary pediatric center in 2019. We targeted consult notes due to potential differences in expertise between the documenting and reading providers. Abbreviated medication names were identified using 2 Natural Language Processing methods: a) named-entity recognition (NER) and b) Regular Expressions (RegEx). The NER model was a pre-trained model called MED7, identifying 7 categories: drug names, route of administration, frequency, dosage, strength, form, duration. We fine-tuned the model on a small sample of annotated documents from our hospital. RegEx was used to identify strings likely to be medications given surrounding text context.
-
-The abstracted lists were then matched against both generic and commercial medication names using the following lists: RxNorm, National Drug Code Directory (NDCD). The remaining terms were then sorted by frequency, and the top 2,295 were reviewed.
+Retrospective chart review of pediatric ED consult notes at a tertiary pediatric center in 2019. We targeted consult notes due to potential differences in expertise between the documenting and reading providers. Abbreviated medication names were identified using 2 Natural Language Processing methods: a) named-entity recognition (NER) and b) Regular Expressions (RegEx). The NER model was a pre-trained model called MED7, identifying 7 categories: drug names, route of administration, frequency, dosage, strength, form, duration. We fine-tuned the model on a small sample of annotated documents from our hospital. RegEx was used to identify strings likely to be medications given surrounding text context. The abstracted lists were then matched against both generic and commercial medication names using the following lists: RxNorm, National Drug Code Directory (NDCD). The remaining terms were then sorted by frequency, and the top 2,295 were reviewed.
 
 # Results
 
@@ -85,4 +85,4 @@ knitr::include_graphics("./images/table-meds.png")
 
 # Conclusions
 
-With natural language processing tools we can create libraries of abbreviated medication names. Future studies should include domain-expert champions who will help interpret domain-specific expressions beyond the expertise of the informatician.
+With natural language processing tools we can create libraries of abbreviated medication names. Future studies should include domain-expert champions to help interpret domain-specific expressions. These libraries should be incorporated into documentation tools within electronic medical records.
