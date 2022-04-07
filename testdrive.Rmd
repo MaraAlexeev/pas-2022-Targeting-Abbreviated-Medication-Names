@@ -14,10 +14,10 @@ author:
     affil: 2
     email: marvin.harper@childrens.harvard.edu
   - name: Assaf Landschaft, M.Sc.
-    affil: 5
+    affil: 3
     email: assaf.landschaft@childrens.harvard.edu
-  - name: Al Ozonoff, PhD
-    affil: 3, 4
+  - name: Al Ozonoff, PhD, CPPS
+    affil: 4, 5
     email: al.ozonoff@childrens.harvard.edu
 affiliation:
   - num: 1
@@ -36,14 +36,14 @@ main_findings:
   - "We can identify shortened medication names with natural language processing tools." 
 logoright_name: '![](bch_logo.svg){.main-img-right}'
 logoleft_name: '![](qr-nlp-meds.png){.main-img-left}'
+poster_height: "31.5in"
+poster_width: "56in"
 output: 
   posterdown::posterdown_betterland:
     self_contained: true
     pandoc_args: --mathjax
     highlight: haddock
     number_sections: false
-link-citations: true
-bibliography: packages.bib
 ---
 
 ```{r, include=FALSE}
