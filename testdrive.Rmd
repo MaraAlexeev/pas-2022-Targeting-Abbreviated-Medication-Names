@@ -104,5 +104,4 @@ med_list %>% kable() %>% kable_classic()
 ```
 
 ***Funding Acknowledgements***
-
-Mara Alexeev---Biomedical Informatics and Data Science Research Training Program, T15LM007092-30
+Alexeev---Biomedical Informatics and Data Science Research Training Program, T15LM007092-30, PI Dr. Nils Gehlenborg, PhD; Ozonoff, Landschaft, Kimia---AHRQ Research Grant 5R01HS026246
