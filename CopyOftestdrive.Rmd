@@ -30,7 +30,6 @@ affiliation:
     address: Precision Vaccines Program, Boston Children's Hospital
   - num: 5
     address: Department of Pediatrics, Harvard Medical School
-    
 main_findings:
   - "Abbreviated medication names are present in many notes and can be ambiguous."
   - "We can identify shortened medication names with natural language processing (NLP) tools." 
