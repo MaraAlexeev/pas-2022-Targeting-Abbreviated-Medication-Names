@@ -30,7 +30,7 @@ affiliation:
     address: Precision Vaccines Program, Boston Children's Hospital
   - num: 5
     address: Department of Pediatrics, Harvard Medical School
-    
+main_width: 0.4  
 main_findings:
   - "Natural Language Processing tools can identify abbreviated medication names."
   - "Libraries of these should be incorporated seamlessly into clinical documentation tools."
@@ -75,7 +75,7 @@ According to The Joint Commission, medication names should not be abbreviated as
 
 # Objectives
 
-Identify abbreviated medication names in clinical narrative, using Natural Language Processing, as a first step towards elimination
+Identify abbreviated medication names in clinical narratives, using Natural Language Processing, as a first step towards elimination in medical documentation.
 
 # Methods
 
@@ -91,17 +91,19 @@ Abbreviated, misspelled and true medication names were identified using 2 Natura
 
 
 ```{r}
-knitr::include_graphics("./results-image.png")
+knitr::include_graphics("results-image.png")
 ```
 
 
 
 **Selected Abbreviated Medication Names Found**
-```{r medtable, tab.cap = 'Table 1: Selected Medication Abbreviations Found', out.width="100%"}
+```{r medtable}
 
-med_list %>% kable() %>% kable_classic()
+med_list %>% filter(Count > 11) %>% kable() %>% kable_classic()
 
 ```
+# Conclusions
+Natural Language Processing tools can create libraries of abbreviated medication names used by clinicians. We can then use the output to determine usage frequency and risk of misinterpretation. Abbreviations are not limited to medications; future studies should include more abbreviation types and domain-experts to help interpret domain-specific expressions. Like a spell checker, these libraries could be incorporated into documentation tools in EMR systems to suggest expanded terms.
 
-***Funding Acknowledgements***
-Alexeev---Biomedical Informatics and Data Science Research Training Program, T15LM007092-30, PI Dr. Nils Gehlenborg, PhD; Ozonoff, Landschaft, Kimia---AHRQ Research Grant 5R01HS026246
+***Funding Sources***
+Alexeev---Biomedical Informatics and Data Science Research Training Program, T15LM007092-30; Ozonoff, Landschaft, Kimia---AHRQ Research Grant 5R01HS026246
